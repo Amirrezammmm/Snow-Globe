@@ -1,0 +1,69 @@
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to bottom, #001, #003);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+    }
+
+    .snow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+
+    .globe {
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle at 30% 30%, #fff, #cce0ff);
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: inset 0 0 10px #fff, 0 0 30px #77aaff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      transition: transform 1s ease;
+    }
+
+    .snowman-img {
+      width: 90px;
+      height: auto;
+      position: absolute;
+      bottom: 10px;
+      user-select: none;
+    }
+
+    #container {
+      display: none;
+      z-index: 5;
+    }
